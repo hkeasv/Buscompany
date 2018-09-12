@@ -29,5 +29,13 @@ namespace BusCompany.UnitTests
             Assert.Equal(2510, price);
         }
 
+        [Fact]
+        public void CalculatePrice_DistanceIs100_PriceShouldBe3498()
+        {
+            //Act
+            decimal price = calculator.CalculatePrice(100);
+            //Assert
+            Assert.Equal(3498, price);
+        }
     }
 }
