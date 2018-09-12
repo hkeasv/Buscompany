@@ -47,5 +47,12 @@ namespace BusCompany.UnitTests
             Assert.Equal(6704, price);
         }
 
+        [Fact]
+        public void CalculatePrice_NegativeDistance_ThrowsException()
+        {
+            Assert.Throws<System.ArgumentException>(() => calculator.CalculatePrice(-1));
+        }
+
+
     }
 }

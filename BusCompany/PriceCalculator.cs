@@ -12,6 +12,9 @@ namespace BusCompany
         public decimal CalculatePrice(int distance){
             int d1 = 0, d2 = 0, d3 = 0;
 
+            if (distance < 0)
+                throw new ArgumentException("Distance cannot be negative!");
+
             if (distance < 100)
                 d1 = distance;
             else if (distance <= 500)
@@ -27,7 +30,6 @@ namespace BusCompany
 
             decimal price = initialFee + d1KmFee*d1 + d2KmFee*d2 + d3KmFee * d3;
             return price;
-
         }
 
 
