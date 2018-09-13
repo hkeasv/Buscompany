@@ -3,10 +3,18 @@ using Xunit;
 
 namespace BusCompany.UnitTests
 {
-    public class PriceCalculatorTests
+    public class PriceCalculatorTests : IDisposable
     {
+        // This class uses the "Constructor and dispose" approach
+        // to sharing a test context. This approach is good when
+        // all test methods require the same setup (i.e. the same
+        // test context.
+
         PriceCalculator calculator;
 
+        // Constructor is used for setup. The test runner creates
+        // a new instance of the test class every time a test is
+        // run. Hence the code in the constructor is run for each test.
         public PriceCalculatorTests(){
             calculator = new PriceCalculator();
         }
@@ -53,6 +61,9 @@ namespace BusCompany.UnitTests
             Assert.Throws<System.ArgumentException>(() => calculator.CalculatePrice(-1));
         }
 
-
+        public void Dispose()
+        {
+            // There is nothing to dispose in this case.
+        }
     }
 }
