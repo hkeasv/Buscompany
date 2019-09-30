@@ -1,4 +1,5 @@
-﻿using BusCompany;
+﻿using System;
+using BusCompany;
 using Xunit;
 
 namespace Buscompany.UnitTests
@@ -43,7 +44,16 @@ namespace Buscompany.UnitTests
         [Fact]
         public void CalculatePrice_NegativeDistance_ThrowsException()
         {
-            Assert.Throws<System.ArgumentException>(() => CreateCalculator().CalculatePrice(-1));
+            const int negativeDistance = -1;
+
+            // Arrange
+            var calculator = CreateCalculator();
+
+            // Act
+            Action actual = () => calculator.CalculatePrice(negativeDistance);
+
+            // Assert
+            Assert.Throws<System.ArgumentException>(actual);
         }
     }
 }
