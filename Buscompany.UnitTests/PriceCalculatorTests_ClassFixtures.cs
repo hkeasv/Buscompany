@@ -6,7 +6,7 @@ namespace Buscompany.UnitTests
     {
         // This class uses the "Class fixtures" approach
         // to sharing a test context. When this approach is used
-        // all test methods in the will share the same test context.
+        // all test methods will share the same test context.
 
         // In this example, all test methods share the same
         // PriceCalculator instance. This instance is created
