@@ -20,6 +20,8 @@ namespace Buscompany.UnitTests
         // be decorated with a Collection attribute using the same
         // collection name as defined in the collection definition class.
 
+        // Shared: code + instance
+
         PriceCalculatorFixture _fixture;
 
         public PriceCalculatorTests_CollectionFixtures(PriceCalculatorFixture fixture)

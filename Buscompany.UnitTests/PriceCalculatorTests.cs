@@ -7,8 +7,9 @@ namespace BusCompany.UnitTests
     {
         // This class uses the "Constructor and dispose" approach
         // to sharing a test context. This approach is good when
-        // all test methods require the same setup (i.e. the same
-        // test context.
+        // all test methods require the same setup.
+
+        // Shared: code but not instance
 
         PriceCalculator calculator;
 

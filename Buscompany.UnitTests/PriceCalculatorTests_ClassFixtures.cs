@@ -2,15 +2,18 @@
 
 namespace Buscompany.UnitTests
 {
-    public class PriceCalculatorTests_ClassFixtures : IClassFixture<PriceCalculatorFixture>
+    public class PriceCalculatorTests_ClassFixtures :
+        IClassFixture<PriceCalculatorFixture>
     {
         // This class uses the "Class fixtures" approach
         // to sharing a test context. When this approach is used
-        // all test methods will share the same test context.
+        // all test methods in the class will share the same test context.
 
         // In this example, all test methods share the same
         // PriceCalculator instance. This instance is created
         // by the PriceCalculatorFixture class.
+
+        // Shared: code + instance
 
         PriceCalculatorFixture _fixture;
 
